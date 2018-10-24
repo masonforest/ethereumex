@@ -1,3 +1,4 @@
 use Mix.Config
 
-config :ethereumex, url: System.get_env("ETHEREUM_URL")
+config :ethereumex, web3_url: "wss://rinkeby.infura.io/ws"
+config :ethereumex, client_type: :websocket

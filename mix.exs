@@ -37,7 +37,7 @@ defmodule Ethereumex.Mixfile do
       {:dialyxir, "~> 1.0.0-rc.3", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:httpoison, "~> 1.3.1"},
-      {:poison, "~> 4.0"},
+      {:poison, "~>3.0 or ~> 4.0"},
       {:websockex, "0.4.1"}
     ]
   end

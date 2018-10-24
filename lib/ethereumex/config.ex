@@ -3,7 +3,7 @@ defmodule Ethereumex.Config do
 
   @spec web3_url() :: binary()
   def web3_url do
-    case Application.get_env(:ethereumex, :url) do
+    case Application.get_env(:ethereumex, :web3_url) do
       url when is_binary(url) and url != "" ->
         url
 
