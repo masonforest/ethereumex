@@ -16,7 +16,7 @@ defmodule Ethereumex.WebSocketServer do
     WebSockex.send_frame(WebSocketServer, {:text, message})
 
     receive do
-      decoded_message -> decoded_message
+      decoded_message = %{"jsonrpc" => "2.0"} -> decoded_message
     end
   end
 
