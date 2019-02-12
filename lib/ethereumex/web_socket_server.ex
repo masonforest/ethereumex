@@ -26,7 +26,7 @@ defmodule Ethereumex.WebSocketServer do
     if decoded_message["method"] == "eth_subscription" do
       send(
         state[:subscriptions][decoded_message["params"]["subscription"]],
-        decoded_message["params"]["result"]
+        {:new_heads, decoded_message["params"]["result"]}
       )
     else
       send(state[:requests][decoded_message["id"]], decoded_message)
